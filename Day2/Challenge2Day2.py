@@ -1,5 +1,5 @@
-# Challenge 1 Day 2
-# https://adventofcode.com/2021/day/2
+# Challenge 2 Day 2
+# https://adventofcode.com/2021/day/2#part2
 
 
 
@@ -20,16 +20,18 @@ print(inputArray)
 def calculatePos(inputArray):
     horizPos = 0
     depth = 0
+    aim = 0
     i = 0
     while i < len(inputArray):
         if (i + 1) > len(inputArray):
             break
         if inputArray[i] == "forward":
             horizPos += inputArray[i + 1]
+            depth += aim * inputArray[i + 1]
         elif inputArray[i] == "up":
-            depth -= inputArray[i + 1]
+            aim -= inputArray[i + 1]
         elif inputArray[i] == "down":
-            depth += inputArray[i + 1]
+            aim += inputArray[i + 1]
         i += 2
     print(horizPos * depth)
     return horizPos * depth
