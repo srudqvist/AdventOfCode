@@ -3,7 +3,7 @@
 
 # Get the input from the file
 def readData():
-    dataFile = open("./FirstChallenge/input.txt")
+    dataFile = open("./Day1/FirstChallenge/input.txt")
     inputList = []
     for line in dataFile:
         thisLine = line.split(" ")
