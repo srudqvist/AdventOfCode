@@ -2,7 +2,6 @@
 # https://adventofcode.com/2021/day/2#part2
 
 
-
 # Get the input from the file
 def readData():
     dataFile = open("./Day2/input.txt")
